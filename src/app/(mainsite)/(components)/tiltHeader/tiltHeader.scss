@@ -1,0 +1,52 @@
+.tilt-header {
+  background: url("/b/scroll-text.png"), var(--pink);
+  background-repeat: repeat-x;
+  background-position: center;
+  animation: scrollbg 50s linear infinite;
+  margin-bottom: 100px;
+
+  color: black;
+  width: 100%;
+  &.right {
+    rotate: 5deg;
+  }
+  &.left {
+    rotate: -5deg;
+  }
+  .confine {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .l {
+      display: flex;
+      gap: 2em;
+      padding: 1em;
+      align-items: center;
+      h2 {
+        font-size: 6rem;
+      }
+      .triangle {
+        width: 60px;
+        height: 60px;
+        background: black;
+        clip-path: polygon(0 0, 0% 100%, 100% 50%);
+      }
+    }
+    .r {
+      .btn-more {
+        color: white;
+        background: black;
+        border-radius: 2em;
+        font-size: 1.5rem;
+        padding: 1em 2em;
+        display: block;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
