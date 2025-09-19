@@ -7,6 +7,7 @@ import localFont from "next/font/local";
 import { CSSProperties } from "react";
 import Header from "./(components)/header/Header";
 import Footer from "./(components)/footer/Footer";
+import Loading from "./(components)/loading/Loading";
 // import "react-slick/";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -68,6 +69,7 @@ export default function RootLayout({
         className={`topofpage`}
         style={{ "--fontM": CircularStd.style.fontFamily } as CSSProperties}
       >
+        <Loading />
         <Header />
         {children}
         <Footer />
