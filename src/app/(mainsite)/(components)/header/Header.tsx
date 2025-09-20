@@ -26,62 +26,62 @@ export default function Header({}: Props) {
           <Link href={"/"} className="btn logo">
             <img src="/g/logo_w.png" alt="" height={300} />
           </Link>
-          <nav>
-            <Link
-              className={`btn btn-nav ${path.includes("talents") ? "act" : ""}`}
-              href={"/talents"}
-            >
-              talents
-            </Link>
-            <div className="rw"></div>
-            <Link
-              className={`btn btn-nav ${path.includes("about") ? "act" : ""}`}
-              href={"/about"}
-            >
-              about
-            </Link>
-            <div className="rw"></div>
-            <Link
-              className={`btn btn-nav ${path.includes("news") ? "act" : ""}`}
-              href={"/news"}
-            >
-              news
-            </Link>
-            <div className="rw"></div>
-            <Link
-              className={`btn btn-nav ${path.includes("shop") ? "act" : ""}`}
-              href={"https://e-roi.shop"}
-            >
-              shop
-            </Link>
-            <div className="rw"></div>
-            <Link
-              className={`btn btn-nav ${
-                path.includes("schedule") ? "act" : ""
-              }`}
-              href={"/schedule"}
-            >
-              schedule
-            </Link>
-            <div className="rw"></div>
-            <Link
-              className={`btn btn-nav ${path.includes("contact") ? "act" : ""}`}
-              href={"/contact"}
-            >
-              contact
-            </Link>
-            <div className="rw"></div>
-            <Link
-              className={`btn btn-nav ${
-                path.includes("policies") ? "act" : ""
-              }`}
-              href={"/policies"}
-            >
-              policies
-            </Link>
-            <div className="rw"></div>
-          </nav>
         </div>
+        <nav>
+          <div className="rw"></div>
+
+          <Link
+            className={`btn btn-nav ${path.includes("talents") ? "act" : ""}`}
+            href={"/talents"}
+          >
+            talents
+            <div className="dropdown">
+              <Link href="/talents/rift" className="btn btn-sub">
+                GENERATION 1: RIFT
+              </Link>
+              <Link href="/talents/rift" className="btn btn-sub">
+                GENERATION 2: RIFT
+              </Link>
+              <Link href="/talents/rift" className="btn btn-sub">
+                GENERATION 3: RIFT
+              </Link>
+            </div>
+          </Link>
+          <div className="rw"></div>
+          <Link
+            className={`btn btn-nav ${path.includes("about") ? "act" : ""}`}
+            href={"/news"}
+          >
+            news
+          </Link>
+          <div className="rw"></div>
+          <Link
+            className={`btn btn-nav ${path.includes("news") ? "act" : ""}`}
+            href={"https://e-roi.shop"}
+          >
+            shop
+          </Link>
+          <div className="rw"></div>
+          <Link
+            className={`btn btn-nav ${path.includes("shop") ? "act" : ""}`}
+            href={"/contact"}
+          >
+            contact
+            <div className="dropdown">
+              <Link href="/jobs" className="btn btn-sub">
+                JOBS
+              </Link>
+              <Link href="/inquiries" className="btn btn-sub">
+                Business Inquiries
+              </Link>
+              <Link href="/other-inquiries" className="btn btn-sub">
+                Other Inquiries
+              </Link>
+            </div>
+          </Link>
+
+          <div className="rw"></div>
+        </nav>
         <div className="icons">
           <div className="socials">
             <a href="#" className="btn btn-soc">

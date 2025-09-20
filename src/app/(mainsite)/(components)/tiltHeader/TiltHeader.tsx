@@ -15,11 +15,13 @@ export default function TiltHeader({ tiltDir, target, h }: Props) {
           <h2>{h}</h2>
           <div className="triangle"></div>
         </div>
-        <div className="r">
-          <Link href={target} className="btn btn-more">
-            MORE+
-          </Link>
-        </div>
+        {target && (
+          <div className="r">
+            <Link href={target} className="btn btn-more">
+              MORE+
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

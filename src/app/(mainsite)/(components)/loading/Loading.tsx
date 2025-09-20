@@ -8,7 +8,7 @@ export default function Loading({}: Props) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(true);
-    }, 7000);
+    }, 4000);
   }, []);
   return (
     <div id="loading" className={loading ? "hide" : ""}>

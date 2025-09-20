@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main id="p_home">
       <section id="banner">
-        <img src="/g/cpc1.png" alt="" />
+        <img src="/g/a1.webp" alt="" />
       </section>
       <CenterText
         sh="Uncensored, Unfiltered, Unforgettable"
@@ -86,7 +86,7 @@ export default function Home() {
         </div>
       </div>
       <div id="staff">
-        <TiltHeader h="STAFF" tiltDir="right" target="/about" />
+        <TiltHeader h="STAFF" tiltDir="right" />
         <div className="sl">
           <a href="#" target="_blank" className="s btn">
             <img src="/g/spch.png" alt="" className="pfp" />

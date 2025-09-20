@@ -4,8 +4,10 @@
   padding: 0.25em 1em;
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  // padding: 1em;
   align-items: center;
+  position: relative;
+  z-index: 1;
   .l {
     display: flex;
     .logo {
@@ -14,37 +16,81 @@
         height: auto;
       }
     }
-
-    nav {
-      display: flex;
-      gap: 1px;
-      align-items: center;
-      &:has(.btn-nav:hover) {
-        .rw {
-          opacity: 0;
-        }
-      }
-      .btn-nav {
-        font-weight: light;
-        padding: 0 1em;
-        font-weight: bolder;
-        transition: all 100ms ease;
-        font-size: 1.4rem;
-        &:hover,
-        &.act {
-          color: var(--pink);
-        }
-      }
+  }
+  height: 100%;
+  nav {
+    display: flex;
+    gap: 1px;
+    height: 100px;
+    align-items: center;
+    &:has(.btn-nav:hover) {
       .rw {
-        height: 20px;
-        width: 2px;
-        background: grey;
-        display: block;
+        // opacity: 0;
+        scale: 1 0;
+      }
+    }
+    .btn-nav {
+      font-weight: light;
+      padding: 0 1em;
+      font-weight: bolder;
+      transition: all 100ms ease;
+      font-size: 1.4rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      &:hover,
+      &.act {
+        color: var(--pink);
+
+        scale: 1;
       }
 
-      .btn-nav:last-child {
-        border-right: none;
+      &:hover {
+        .dropdown {
+          opacity: 1;
+          transform: translateY(0%) translateX(-25%);
+          clip-path: inset(0% 0% 0% 0%);
+        }
       }
+      .dropdown {
+        position: absolute;
+
+        top: 100%;
+        transition: all 1200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform-origin: center top;
+        width: 300px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background: #100f0f;
+        left: 0px;
+        transform: translateY(0%) translateX(-25%);
+        clip-path: inset(0% 0% 100% 0%);
+        z-index: 100;
+        .btn-sub {
+          padding: 1.5em;
+          text-align: center;
+          font-size: 1rem;
+          color: #c7c7c7;
+          &:hover {
+            scale: 1;
+            background: #202020;
+            color: #ff66c5;
+          }
+        }
+      }
+    }
+    .rw {
+      height: 20px;
+      width: 2px;
+      background: grey;
+      display: block;
+      transition: all 500ms ease;
+    }
+
+    .btn-nav:last-child {
+      border-right: none;
     }
   }
   .btn-nav {
