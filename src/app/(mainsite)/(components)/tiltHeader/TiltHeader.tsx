@@ -3,7 +3,7 @@ import React from "react";
 
 type Props = {
   tiltDir: "left" | "right";
-  target: string;
+  target?: string;
   h: string;
 };
 import "./tiltHeader.scss";

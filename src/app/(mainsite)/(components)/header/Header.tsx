@@ -13,7 +13,7 @@ import { usePathname } from "next/navigation";
 import { CiMenuBurger } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaXTwitter } from "react-icons/fa6";
-import { RiInstagramFill } from "react-icons/ri";
+import { RiInstagramFill, RiTwitterXFill } from "react-icons/ri";
 type Props = {};
 
 export default function Header({}: Props) {
@@ -30,11 +30,11 @@ export default function Header({}: Props) {
         <nav>
           <div className="rw"></div>
 
-          <Link
+          <div
             className={`btn btn-nav ${path.includes("talents") ? "act" : ""}`}
-            href={"/talents"}
           >
-            talents
+            <Link href={"/talents"}>talents</Link>
+
             <div className="dropdown">
               <Link href="/talents/rift" className="btn btn-sub">
                 GENERATION 1: RIFT
@@ -46,7 +46,7 @@ export default function Header({}: Props) {
                 GENERATION 3: RIFT
               </Link>
             </div>
-          </Link>
+          </div>
           <div className="rw"></div>
           <Link
             className={`btn btn-nav ${path.includes("about") ? "act" : ""}`}
@@ -62,11 +62,8 @@ export default function Header({}: Props) {
             shop
           </Link>
           <div className="rw"></div>
-          <Link
-            className={`btn btn-nav ${path.includes("shop") ? "act" : ""}`}
-            href={"/contact"}
-          >
-            contact
+          <div className={`btn btn-nav ${path.includes("shop") ? "act" : ""}`}>
+            <Link href="/contact">contact</Link>
             <div className="dropdown">
               <Link href="/jobs" className="btn btn-sub">
                 JOBS
@@ -78,17 +75,17 @@ export default function Header({}: Props) {
                 Other Inquiries
               </Link>
             </div>
-          </Link>
+          </div>
 
           <div className="rw"></div>
         </nav>
         <div className="icons">
           <div className="socials">
             <a href="#" className="btn btn-soc">
-              <FaXTwitter></FaXTwitter>
+              <RiTwitterXFill />
             </a>
             <a href="#" className="btn btn-soc">
-              <RiInstagramFill />
+              <FaInstagram />
             </a>
             <a href="#" className="btn btn-soc">
               <FaYoutube />

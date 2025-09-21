@@ -116,23 +116,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section id="home-foot">
-        <img src="/g/logo_w.png" alt="" className="logo" />
-        <div className="button-list">
-          <Link href={"#"} className="btn">
-            SHOP
-          </Link>
-          <Link href={"#"} className="btn">
-            SCHEDULE
-          </Link>
-          <Link href={"#"} className="btn">
-            JOBS
-          </Link>
-          <Link href={"#"} className="btn">
-            CONTACTS
-          </Link>
-        </div>
-      </section>
+      {/* <section id="home-foot"></section> */}
     </main>
   );
 }
