@@ -1,0 +1,67 @@
+.contact-layout {
+  // min-height: 3200px;
+  .confine {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  #ch {
+    height: 900px;
+    position: relative;
+    .mb {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      top: 0%;
+      opacity: 0.35;
+    }
+    display: flex;
+    align-items: flex-end;
+    h2 {
+      padding: 3%;
+
+      position: relative;
+      font-size: 8rem;
+      font-weight: bold;
+      text-shadow: 0px 0px 10px black;
+    }
+  }
+  .mt {
+    background: var(--pink);
+    font-size: 2rem;
+    color: black;
+    width: fit-content;
+    padding: 0.2em 1em;
+    margin: 1em 0;
+  }
+  .p {
+    color: #a5a5a5;
+    margin: 1em 0;
+    font-size: 1.2rem;
+  }
+  .role-select {
+    .rs {
+      background: #171717;
+      padding: 1em;
+      .confine {
+        display: flex;
+        gap: 0.5em;
+        .btn-role {
+          padding: 0.8em;
+          border-radius: 0.6em;
+          background: black;
+          border: 5px solid #525252;
+          color: #525252;
+          font-size: 2rem;
+          font-family: var(--fontMain);
+          &:hover,
+          &.active {
+            border-color: var(--pink);
+            color: var(--pink);
+            scale: 1.02;
+          }
+        }
+      }
+    }
+  }
+}

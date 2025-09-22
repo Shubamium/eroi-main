@@ -63,7 +63,7 @@ export default function Header({}: Props) {
           </Link>
           <div className="rw"></div>
           <div className={`btn btn-nav ${path.includes("shop") ? "act" : ""}`}>
-            <Link href="/contact">contact</Link>
+            <Link href="/inquiries">contact</Link>
             <div className="dropdown">
               <Link href="/jobs" className="btn btn-sub">
                 JOBS

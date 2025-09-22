@@ -111,7 +111,7 @@
       width: 50px;
       height: 50px;
       padding: 0.5em;
-      background: #ff66c5;
+      background: linear-gradient(to right, var(--pink), #eb20b2);
       border-radius: 50%;
       color: black;
       svg {
@@ -125,7 +125,7 @@
       padding-right: 2em;
     }
     .btn-nav {
-      background: var(--pink);
+      background: linear-gradient(to right, var(--pink), #eb20b2);
       border-radius: 50%;
 
       color: black;
